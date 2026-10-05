@@ -204,8 +204,8 @@ fn main() {
 
     println!("Fuzzy C-Means batch segmentation");
 
-    let img_path = "milky-way.jpg";
-    let img = image::open(img_path).expect("Failed to open image");
+    let img_path = std::env::args().nth(1).unwrap_or_else(|| "assets/milky-way.jpg".to_string());
+    let img = image::open(&img_path).expect("Failed to open image");
     let (width, height) = img.dimensions();
     let data = img_to_array(&img); // correction de la coquille
 

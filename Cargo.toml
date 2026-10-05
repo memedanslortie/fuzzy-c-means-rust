@@ -1,0 +1,13 @@
+[package]
+name = "fuzzy-c-means"
+version = "0.1.0"
+edition = "2021"
+description = "Fuzzy C-Means clustering from scratch, applied to color image segmentation"
+
+[dependencies]
+ndarray = "0.17"
+ndarray-rand = "0.16"
+image = "0.25"
+
+[profile.release]
+opt-level = 3
